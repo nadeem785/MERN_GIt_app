@@ -1,0 +1,30 @@
+import {Route,Routes} from 'react-router-dom'
+import LoginPage from './pages/LoginPage'
+import HomPage from './pages/HomPage'
+import LikesPage from './pages/LikesPage'
+import SignUpPage from './pages/SignUpPage'
+import ExplorePage from './pages/ExplorePage'
+import Sidebar from './components/SideBar'
+
+function App() {
+
+  return (
+      <div className=" flex text-white">
+       <Sidebar/>
+       <div className='max-w-5xl my-5 text-white mx-auto transition-all duration-300  flex-1'>
+        <Routes>
+          <Route path="/" element={<HomPage/>}/>
+          <Route path="/login" element={<LoginPage/>}/>
+          <Route path="/signup" element={<SignUpPage/>}/>
+          <Route path="/explore" element={<ExplorePage/>}/>
+          <Route path="/likes" element={<LikesPage/>}/>
+
+        </Routes>
+       </div>
+
+      </div>
+    
+  )
+}
+
+export default App
