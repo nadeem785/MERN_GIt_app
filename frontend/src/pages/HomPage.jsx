@@ -18,8 +18,9 @@ const getUserProfileAndRepos= useCallback(
 		try{
 			const res= await fetch(`/api/users/profile/${username}`)
 			const {userProfile,repos}= await res.json()
+			console.log(userProfile,repos)
 	
-	repos.sort((a,b)=>new Date(b.created_at)- new Date(a.created_at))
+			repos.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 	setRepos(repos)
 	setUserProfile(userProfile)
 	console.log("userprofile :",userProfile)
@@ -27,7 +28,7 @@ const getUserProfileAndRepos= useCallback(
 	return {userProfile, repos}
 		}
 		catch(err){
-	toast.error("err.message")
+	toast.error(err.message)
 		}finally{
 			setLoading(false)
 		}
