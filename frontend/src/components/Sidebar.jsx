@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { IoHomeSharp } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
@@ -6,10 +6,11 @@ import { MdOutlineExplore } from "react-icons/md";
 import { PiSignInBold } from "react-icons/pi";
 import { MdEditDocument } from "react-icons/md";
 import Logout from "./Logout"
+import { useAuthContext } from '../context/AuthContext';
 
 
 function SideBar() {
-const authUser= true;
+const {authUser}= useAuthContext();
 
 
   return (

@@ -5,7 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { TfiThought } from "react-icons/tfi";
 import { FaEye } from "react-icons/fa";
 import {formatMemberSince }from "../utils/functions"
-
+import LikeProfile from "./LikeProfile"
 
 
 function ProfileInfo({userProfile}) {
@@ -36,8 +36,11 @@ const memeberSince=formatMemberSince(userProfile?.created_at)
 <a href={userProfile?.html_url} target='_blank' rel='noreferrer'>
 						<img src={userProfile?.avatar_url} className='rounded-md w-24 h-24 mb-2' alt='' />
 					</a>
-</div>
-<div className='flex gap-2 items-center flex-col'>
+
+<div className='flex gap-2 items-center flex-col '>
+
+<LikeProfile userProfile={userProfile}/>
+
 						<a
 							href={userProfile?.html_url}
 							target='_blank'
@@ -47,6 +50,7 @@ const memeberSince=formatMemberSince(userProfile?.created_at)
 							<FaEye size={16} />
 							View on Github
 						</a>
+					</div>
 					</div>
 
 </div>
