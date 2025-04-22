@@ -9,7 +9,7 @@ import Logout from "./Logout"
 import { useAuthContext } from '../context/AuthContext';
 
 
-function SideBar() {
+function Sidebar() {
 const {authUser}= useAuthContext();
 
 
@@ -80,4 +80,4 @@ const {authUser}= useAuthContext();
   )
 }
 
-export default SideBar
+export default Sidebar

@@ -4,7 +4,7 @@ import HomPage from './pages/HomPage'
 import LikesPage from './pages/LikesPage'
 import SignUpPage from './pages/SignUpPage'
 import ExplorePage from './pages/ExplorePage'
-import SideBar from './components/SideBar'
+import Sidebar from './components/Sidebar'
 import {Toaster} from "react-hot-toast"
 import { useAuthContext } from './context/AuthContext'
 
@@ -14,7 +14,7 @@ const {authUser,loading}= useAuthContext()
 if(loading)return null;
   return (
       <div className=" flex text-white">
-       <SideBar/>
+       <Sidebar/>
        <div className='max-w-5xl my-5 text-white mx-auto transition-all duration-300  flex-1'>
         <Routes>
           <Route path="/" element={<HomPage/>}/>
